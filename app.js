@@ -12,13 +12,14 @@ var Names = StackMob.Model.extend({
 
 //create new instance of Names
 //automatic variations to schema are allowed only with dev key
-var names = new Names({
+/*var names = new Names({
 	name: 'My',
 	surname: 'black',
 	address: 'myoplace 8822 mycity',
 	reputable: false,
 	customer: true
-});
+});*/
+var names = new Names({names_id:'111222'});
 
 //send to stackmob
 /*names.create({
@@ -27,5 +28,12 @@ var names = new Names({
 });*/
 
 //get the last one
-console.log(names.get('name'));
-console.log(names.toJSON());
+//console.log(names.get('name'));
+//show the full json of the last one
+//console.log(names.toJSON());
+
+names.fetch({
+	success: function(model,result,options){
+		console.log(names.toJSON());
+	} //no errors because i'm lazy
+});
