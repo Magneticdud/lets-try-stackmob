@@ -19,7 +19,7 @@ var Names = StackMob.Model.extend({
 	reputable: false,
 	customer: true
 });*/
-var names = new Names({names_id:'111222'});
+var names = new Names({names_id:'ea8b9687ba15443fbeeb1c2ea4cc63ce'});
 
 //send to stackmob
 /*names.create({
