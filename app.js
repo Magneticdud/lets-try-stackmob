@@ -11,16 +11,21 @@ var Names = StackMob.Model.extend({
 });
 
 //create new instance of Names
+//automatic variations to schema are allowed only with dev key
 var names = new Names({
-	name: 'Jack',
+	name: 'My',
 	surname: 'black',
-	address: 'noplace 8822 mycity',
-	reputable: true,
+	address: 'myoplace 8822 mycity',
+	reputable: false,
 	customer: true
 });
 
 //send to stackmob
-names.create({
+/*names.create({
 	success: function(model,result,options) {console.debug(model.toJSON());},
 	error: function(model,error,options) {}
-});
+});*/
+
+//get the last one
+console.log(names.get('name'));
+console.log(names.toJSON());
