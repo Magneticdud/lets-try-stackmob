@@ -12,10 +12,11 @@ var Names = StackMob.Model.extend({
 
 //create new instance of Names
 var names = new Names({
-	name: 'John',
-	surname: 'Smith',
-	address: 'inexistent place 44322 mycity',
-	reputable: false
+	name: 'Jack',
+	surname: 'black',
+	address: 'noplace 8822 mycity',
+	reputable: true,
+	customer: true
 });
 
 //send to stackmob
