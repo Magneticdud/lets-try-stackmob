@@ -37,3 +37,10 @@ names.fetch({
 		console.log(names.toJSON());
 	} //no errors because i'm lazy
 });
+
+//If you save a field that previously didn't exist, StackMob will add that to your schema automatically (only in the development environment).
+names.save({customer:false}, {
+	success: function(model,result,options){
+		console.log(names.toJSON());
+	} //no errors because i'm lazy
+});
