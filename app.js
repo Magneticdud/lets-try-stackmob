@@ -214,6 +214,19 @@ var myApp = (function($) {
   });
 
   var initialize = function() {
+	var user = new StackMob.User({ username: 'myusername', password: 'nopassword', budget: 'poor'  });
+	user.login(false, {
+	  success: function(model, result, options) {
+	    //if successfully logged in, StackMob returns the full user object to you
+	    console.log("logged in!");
+	  },
+	  error: function(model, result, options) {
+	    console.error(result); //or print out the error
+	  }
+	 }
+	);
+
+  	
     var todos = new Todos();
     todos.fetch({
       async: false
