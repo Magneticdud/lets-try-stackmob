@@ -32,7 +32,7 @@ var names = new Names({names_id:'ea8b9687ba15443fbeeb1c2ea4cc63ce'});
 //show the full json of the last one
 //console.log(names.toJSON());
 
-names.fetch({
+/*names.fetch({
 	success: function(model,result,options){
 		console.log(names.toJSON());
 	} //no errors because i'm lazy
@@ -43,4 +43,10 @@ names.save({customer:false}, {
 	success: function(model,result,options){
 		console.log(names.toJSON());
 	} //no errors because i'm lazy
+});*/
+
+var user = new StackMob.User({ username: 'myusername', password: 'nopassword', budget: 'poor'  });
+user.create({
+  success: function(model, result, options) {},
+  error: function(model, result, options) {}
 });
