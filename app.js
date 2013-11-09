@@ -46,7 +46,15 @@ names.save({customer:false}, {
 });*/
 
 var user = new StackMob.User({ username: 'myusername', password: 'nopassword', budget: 'poor'  });
-user.create({
+/*user.create({
   success: function(model, result, options) {},
   error: function(model, result, options) {}
+});*/
+user.login(false, {
+  success: function(model, result, options) {
+    //if successfully logged in, StackMob returns the full user object to you
+  },
+  error: function(model, result, options) {
+    console.error(result); //or print out the error
+  }
 });
